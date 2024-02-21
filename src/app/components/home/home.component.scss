@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-big {
+  font-size: 22px;
+  width: 150px;
+  height: 70px;
+}
