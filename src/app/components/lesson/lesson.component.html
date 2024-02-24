@@ -1,16 +1,14 @@
 <div class="container">
   <div class="navbar">
     <button mat-icon-button color="primary" [routerLink]="['']">
-      <mat-icon>home</mat-icon>
+      <mat-icon class="home-icon">home</mat-icon>
     </button>
   </div>
 
   <div class="container-items">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <app-card
+      *ngFor="let item of data"
+      [value]="item"
+    ></app-card>
   </div>
 </div>

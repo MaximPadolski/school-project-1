@@ -10,6 +10,4 @@ import { MatButtonModule } from '@angular/material/button';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterModule, MatButtonModule]
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

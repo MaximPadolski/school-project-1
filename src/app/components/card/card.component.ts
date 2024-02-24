@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { getAnswerPipe } from 'src/app/helpers/calculate-answer.pipe';
 
 @Component({
   standalone: true,
@@ -18,9 +19,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       transition('active => inactive', animate('500ms ease-out')),
       transition('inactive => active', animate('500ms ease-in'))
     ])
-  ]
+  ],
+  imports: [getAnswerPipe]
 })
 export class CardComponent {
+  @Input() value: string = '';
+
   flip: string = 'inactive';
 
   toggleFlip() {

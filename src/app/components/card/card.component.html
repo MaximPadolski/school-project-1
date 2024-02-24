@@ -1,6 +1,6 @@
 <div class="tp-wrapper">
 	<div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
-		<div class="tp-box__side tp-box__front"> 20 - 3 </div>
-		<div class="tp-box__side tp-box__back"> 17 </div>
+		<div class="tp-box__side tp-box__front"> {{ value }} </div>
+		<div class="tp-box__side tp-box__back"> {{ value | getAnswer }} </div>
 	</div>
 </div>
