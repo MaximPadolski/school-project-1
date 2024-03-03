@@ -24,5 +24,5 @@ import { CommonModule } from '@angular/common';
 export class LessonComponent {
   private readonly mainService = inject(MainService);
 
-  readonly data = this.mainService.shuffle(subtraction);
+  readonly data = this.mainService.shuffle(subtraction).slice(0, 15);
 }
